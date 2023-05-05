@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
-const App = () => {
-	return <h1>Hola mundo</h1>;
-};
+import { App } from './HelloWorldApp';
 
 ReactDOM.createRoot(document.querySelector('#root')).render(
 	<React.StrictMode>
