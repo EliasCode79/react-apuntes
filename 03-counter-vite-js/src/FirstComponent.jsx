@@ -12,5 +12,11 @@ export const FirtsApp = ({ title, subTitle }) => {
 // indicamos q tipos de datos esperamos y si es obligatorio o no
 FirtsApp.propTypes = {
 	title: PropTypes.string.isRequired, // indicamos q es obligatorio q el required.
-	subTitle: PropTypes.number,
+	subTitle: PropTypes.string,
+};
+
+FirtsApp.defaultProps = {
+	name: 'elias franco',
+	title: 'no hay titulo',
+	subTitle: 'no hay subtitulo',
 };
