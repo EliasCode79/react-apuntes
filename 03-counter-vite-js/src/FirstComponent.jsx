@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const FirtsApp = ({ title, subTitle }) => {
 	return (
 		<>
@@ -5,4 +7,10 @@ export const FirtsApp = ({ title, subTitle }) => {
 			<p>{subTitle}</p>
 		</>
 	);
+};
+
+// indicamos q tipos de datos esperamos y si es obligatorio o no
+FirtsApp.propTypes = {
+	title: PropTypes.string.isRequired, // indicamos q es obligatorio q el required.
+	subTitle: PropTypes.number,
 };
