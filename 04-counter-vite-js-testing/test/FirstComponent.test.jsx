@@ -30,6 +30,6 @@ describe('pruebas en FirstComponent', () => {
 		expect(getByText(subTitle)).toBeTruthy(); // el metodo 'getByText' es solo para un elemento.
 
 		// Si tenemos mas de uno podemos usar el sgte metodo.
-		expect(getAllByText(subTitle).length).toBe(1);
+		expect(getAllByText(subTitle).length).toBe(1); // el metodo getAllByText nos devuelve un arreglo con los elementos q contento el 'subTitle'
 	});
 });
