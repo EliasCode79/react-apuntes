@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 
-export const FirtsApp = ({ title, subTitle }) => {
+export const FirtsApp = ({ title, subTitle, name }) => {
 	return (
 		<>
 			<h1>{title}</h1>
 			<p>{subTitle}</p>
+			<p>{name}</p>
 		</>
 	);
 };
@@ -16,7 +17,7 @@ FirtsApp.propTypes = {
 };
 
 FirtsApp.defaultProps = {
-	name: 'elias franco',
-	title: 'no hay titulo',
+	name: 'no hay nombre',
+	// title: 'no hay titulo',
 	subTitle: 'no hay subtitulo',
 };
