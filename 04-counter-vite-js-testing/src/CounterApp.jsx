@@ -18,7 +18,9 @@ export const CounterApp = ({ value }) => {
 
 			<button onClick={handler}>+1</button>
 			<button onClick={handlerRest}>-1</button>
-			<button onClick={handlerReset}>Reset</button>
+			<button aria-label='btn-reset' onClick={handlerReset}>
+				Reset
+			</button>
 		</>
 	);
 };
