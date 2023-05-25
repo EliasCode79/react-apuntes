@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pruebas en FirstComponent tiene q hacer match con el snapshott 1`] = `
+<div>
+  <h1>
+    hola soy Elias
+  </h1>
+  <p>
+    no hay subtitulo
+  </p>
+  <p>
+    no hay nombre
+  </p>
+</div>
+`;
