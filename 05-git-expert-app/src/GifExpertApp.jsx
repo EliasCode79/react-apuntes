@@ -3,7 +3,7 @@ import { AddCategory } from './components/AddCategory';
 import { GifGrid } from './components/GifGrid';
 
 export const GifExpertApp = () => {
-	const [categories, setCategories] = useState(['one punch', 'dragon ball']);
+	const [categories, setCategories] = useState(['one punch']);
 
 	const onAddCategory = (newCategory) => {
 		if (categories.includes(newCategory)) return; // con esta linea hacemos q no haya valores repetidos y tambien resolvemos el tema del 'key' unico den los 'li'.
