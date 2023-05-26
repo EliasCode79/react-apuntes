@@ -5,7 +5,7 @@ export const GifExpertApp = () => {
 	const [categories, setCategories] = useState(['one punch', 'dragon ball']);
 
 	const onAddCategory = (newCategory) => {
-		// console.log(newCategory);
+		if (categories.includes(newCategory)) return; // con esta linea hacemos q no haya valores repetidos y tambien resolvemos el tema del 'key' unico den los 'li'.
 		setCategories([...categories, newCategory]);
 	};
 
