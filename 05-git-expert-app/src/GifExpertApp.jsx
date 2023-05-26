@@ -15,10 +15,10 @@ export const GifExpertApp = () => {
 			<h1>GifExpertApp</h1>
 
 			{/* input */}
-			<AddCategory />
+			<AddCategory setCategories={setCategories} />
 			{/* grid table */}
 
-			<button onClick={(e) => onAddCategory()}>Agregar</button>
+			{/* <button onClick={(e) => onAddCategory()}>Agregar</button> */}
 			<ol>
 				{/* Para recorrer un array usamo el map, a los elementos li tenemos q agregarles un key para q no nos presente problemas en la consola */}
 				{categories.map((categorie) => {
