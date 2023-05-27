@@ -1,15 +1,26 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { getGifs } from '../helpers/getGifs';
 
 export const GifGrid = ({ category }) => {
-	// este hooks nos ayuda a dispara un evento secuandario(ej: cuando se creo por primera vez el componenete, cuando cambia el estado, etc), en este caso vamos hacer q este hook se ejecute cuando se crea el este componente, para esto le pasamos el 2do parametro un bracket vacio [].
+	const [images, setImages] = useState([]);
+
+	const getImages = async () => {
+		const newImages = await getGifs(category);
+		setImages(newImages);
+	};
+
 	useEffect(() => {
-		getGifs(category);
+		getImages();
 	}, []);
 
 	return (
 		<>
 			<h3>{category}</h3>
+			<ol>
+				{images.map(({ id, title }) => (
+					<li key={id}>{title}</li>
+				))}
+			</ol>
 		</>
 	);
 };
