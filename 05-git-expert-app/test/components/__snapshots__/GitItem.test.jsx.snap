@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test de <GitItem /> Snapshot del componente 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <img
+      alt="saitama"
+      class="card"
+      src="https://google.com/"
+    />
+    <p>
+      saitama
+    </p>
+  </div>
+</div>
+`;
