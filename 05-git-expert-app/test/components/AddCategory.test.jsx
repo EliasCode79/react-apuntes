@@ -12,4 +12,17 @@ describe('test en <AddCategory />', () => {
 		expect(input.value).toBe('saitama');
 		// screen.debug();
 	});
+
+	test('Debe de llamar a onNewValue si el textbox tiene un string', () => {
+		const valor = 'saitama';
+		render(<AddCategory onNewValue={() => {}} />);
+
+		const input = screen.getByRole('textbox');
+		const form = screen.getByRole('form');
+
+		fireEvent.input(input, { target: { value: { valor } } });
+		fireEvent.submit(form);
+
+		expect(input.value).toBe('');
+	});
 });
