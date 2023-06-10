@@ -16,9 +16,19 @@ export const SimpleForm = () => {
 		});
 	};
 
+	// Si el useEffect no tiene dependencias este se llamara cada vez q se cambien q se el estado(useState de formState), la dependencia de useEffect es el 2do argumento q se pasa al useEffect, el segundo argumento normalmente es un arreglo.
 	useEffect(() => {
 		console.log('llamando a userEffect');
-	});
+	}, []); // cuando le pasamos la dependecia de un arreglo vacio, esto indica q el useEffect se llamara cuando se cree el componente o se monte el compoente.
+
+	// se ejecuta el useEffect cuando el formState(lo pasamos como dependencia del useEffect) tiene algun cambio.
+	useEffect(() => {
+		console.log('cambian el formState');
+	}, [formState]);
+
+	useEffect(() => {
+		console.log('cambiando el email');
+	}, [email]);
 
 	return (
 		<>
